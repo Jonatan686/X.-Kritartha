@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Panel</title>
+</head>
+<body style="font-family:Poppins; text-align:center;">
+
+<h1>Admin Panel 😎</h1>
+
+<h3>Edit Visi Kelas</h3>
+<input type="text" id="visiInput" placeholder="Tulis visi baru...">
+<button onclick="saveVisi()">Simpan</button>
+
+<br><br>
+
+<a href="index.html">⬅ Kembali ke Website</a>
+<br><br>
+<button onclick="logout()">Logout</button>
+
+<script>
+function saveVisi() {
+  const visi = document.getElementById("visiInput").value;
+  localStorage.setItem("visi", visi);
+  alert("Visi berhasil disimpan!");
+}
+
+function logout() {
+  window.location.href = "login.html";
+}
+</script>
+
+</body>
+</html>
