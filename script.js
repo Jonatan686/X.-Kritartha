@@ -53,3 +53,15 @@ const savedVisi = localStorage.getItem("visi");
 if (savedVisi) {
   document.getElementById("visiText").textContent = savedVisi;
 }
+
+const savedJudul = localStorage.getItem("judul");
+
+if (savedJudul) {
+  document.getElementById("judulText").textContent = savedJudul;
+}
+
+const pengumuman = localStorage.getItem("pengumuman");
+
+if (pengumuman) {
+  document.getElementById("pengumumanText").textContent = "📢 " + pengumuman;
+}

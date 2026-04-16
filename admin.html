@@ -7,9 +7,17 @@
 
 <h1>Admin Panel 😎</h1>
 
+<h3>Edit Judul Website</h3>
+<input type="text" id="judulInput" placeholder="Judul baru...">
+<button onclick="saveJudul()">Simpan</button>
+
 <h3>Edit Visi Kelas</h3>
 <input type="text" id="visiInput" placeholder="Tulis visi baru...">
 <button onclick="saveVisi()">Simpan</button>
+
+<h3>Buat Pengumuman</h3>
+<input type="text" id="pengumuman">
+<button onclick="savePengumuman()">Simpan</button>
 
 <br><br>
 
@@ -26,6 +34,18 @@ function saveVisi() {
 
 function logout() {
   window.location.href = "login.html";
+}
+
+function saveJudul() {
+  const judul = document.getElementById("judulInput").value;
+  localStorage.setItem("judul", judul);
+  alert("Judul disimpan!");
+}
+
+function savePengumuman() {
+  const text = document.getElementById("pengumuman").value;
+  localStorage.setItem("pengumuman", text);
+  alert("Pengumuman disimpan!");
 }
 </script>
 
